@@ -1,6 +1,9 @@
 import "./styles/main.scss";
 import createButton from "./createButton";
 import createDiv from "./createDiv";
+import completedSidebar from "./completedSideBar";
+
+export const todos = [];
 
 function createHeader() {
   const header = document.createElement("header");
@@ -16,12 +19,23 @@ function createMain() {
   main.classList.add("main");
   main.setAttribute("id", "main");
 
-  main.appendChild(createButton("Today", "Today"));
-  main.appendChild(createButton("Scheduled", "Scheduled"));
-  main.appendChild(createButton("Completed", "Completed"));
-  main.appendChild(createDiv("projects", "Projects"));
-  main.appendChild(createButton("addProjects", "+Projects"));
+  main.appendChild(completedSidebar());
+  main.appendChild(createDiv("mainContainer", ""));
   return main;
+}
+
+function createFooter() {
+  const footer = document.createElement("footer");
+  footer.classList.add("footer");
+  footer.setAttribute("id", "footer");
+
+  footer.appendChild(
+    createDiv(
+      "footerInfo",
+      `Copyright © ${new Date().getFullYear()} Keegan Odell`
+    )
+  );
+  return footer;
 }
 
 function initializeWebsite() {
@@ -29,6 +43,7 @@ function initializeWebsite() {
 
   content.appendChild(createHeader());
   content.appendChild(createMain());
+  content.appendChild(createFooter());
 }
 
 export default initializeWebsite;

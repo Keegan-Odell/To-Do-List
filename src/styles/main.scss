@@ -1,1 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
+body {
+  background-color: #121212;
+}
+
+#githubIcon {
+  position: absolute;
+  bottom: 39px;
+  right: 780px;
+}
+
+#checkmarkIcon {
+  position: absolute;
+  top: 66px;
+  left: 22px;
+}
+
+.header {
+  font-size: 32px;
+  height: 12vh;
+  width: 99vw;
+  color: white;
+  background-color: rgb(148, 148, 148);
+  display: flex;
+  align-items: center;
+
+  .headerText {
+    margin-left: 60px;
+  }
+}
+
+.sideBarContainerComplete {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
+  width: 20vw;
+  border-right-style: solid;
+  color: rgb(148, 148, 148);
+
+  .sideBarContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30vh;
+  }
+
+  .sideBarContainer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 33vh;
+  }
+}
+
+.Today,
+.Scheduled,
+.Completed,
+.addProjects {
+  width: 100px;
+  height: 5vh;
+  background-color: #121212;
+  color: rgb(255, 255, 255);
+  border-style: none;
+  border-bottom-style: solid;
+  font-size: 20px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.Today:hover,
+.Scheduled:hover,
+.Completed:hover,
+.addProjects:hover {
+  opacity: 1;
+}
+
+footer {
+  background-color: rgb(148, 148, 148);
+  height: 6vh;
+  width: 99vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .footerInfo {
+    font-size: 20px;
+  }
+}
