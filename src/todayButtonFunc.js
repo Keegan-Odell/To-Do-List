@@ -1,5 +1,6 @@
 import createDiv from "./createDiv";
 import createButton from "./createButton";
+import addReminder from "./addReminderFunc";
 
 function todayButtonFunctionality() {
   const mainContainer = document.getElementById("mainContainer");
@@ -9,7 +10,7 @@ function todayButtonFunctionality() {
   mainContainer
     .appendChild(createButton("addReminder", "Add Reminder"))
     .addEventListener("click", () => {
-      console.log(123);
+      addReminder();
     });
   return mainContainer;
 }

@@ -1,5 +1,6 @@
 import createDiv from "./createDiv";
 import createButton from "./createButton";
+import addProject from "./addProjectsFunc";
 
 function projectButtonFunctionality() {
   const mainContainer = document.getElementById("mainContainer");
@@ -9,7 +10,7 @@ function projectButtonFunctionality() {
   mainContainer
     .appendChild(createButton("addProject", "Add Project"))
     .addEventListener("click", () => {
-      console.log(123);
+      addProject();
     });
   return mainContainer;
 }
