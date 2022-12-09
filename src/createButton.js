@@ -1,3 +1,5 @@
+import todayButtonFunctionality from "./todayButtonFunc";
+
 function createButton(className, btnName) {
   const btn = document.createElement("button");
   btn.classList.add(className);

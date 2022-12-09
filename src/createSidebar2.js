@@ -1,11 +1,15 @@
 import createButton from "./createButton";
-import createDiv from "./createDiv";
+import projectButtonFunctionality from "./projectButtonFunc";
 
 function createSidebar2() {
   const sidebarContainer = document.createElement("div");
   sidebarContainer.classList.add("sideBarContainer2");
 
-  sidebarContainer.appendChild(createButton("addProjects", "Projects"));
+  sidebarContainer
+    .appendChild(createButton("addProjects", "Projects"))
+    .addEventListener("click", () => {
+      projectButtonFunctionality();
+    });
 
   return sidebarContainer;
 }

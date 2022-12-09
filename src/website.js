@@ -1,5 +1,4 @@
 import "./styles/main.scss";
-import createButton from "./createButton";
 import createDiv from "./createDiv";
 import completedSidebar from "./completedSideBar";
 
@@ -19,8 +18,12 @@ function createMain() {
   main.classList.add("main");
   main.setAttribute("id", "main");
 
+  const mainContainer = document.createElement("div");
+  mainContainer.classList.add("mainContainer");
+  mainContainer.setAttribute("id", "mainContainer");
+
   main.appendChild(completedSidebar());
-  main.appendChild(createDiv("mainContainer", ""));
+  main.appendChild(mainContainer);
   return main;
 }
 

@@ -4,6 +4,10 @@ body {
   background-color: #121212;
 }
 
+main {
+  display: flex;
+}
+
 #githubIcon {
   position: absolute;
   bottom: 39px;
@@ -88,4 +92,14 @@ footer {
   .footerInfo {
     font-size: 20px;
   }
+}
+
+#mainContainer {
+  width: 80vw;
+}
+
+.Title {
+  color: white;
+  font-size: 30px;
+  text-align: center;
 }
