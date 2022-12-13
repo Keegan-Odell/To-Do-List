@@ -5,8 +5,13 @@ import addReminder from "./addReminderFunc";
 function todayButtonFunctionality() {
   const mainContainer = document.getElementById("mainContainer");
 
+  const reminderContainer = document.createElement("div");
+  reminderContainer.classList.add("reminderContainer");
+  reminderContainer.setAttribute("id", "reminderContainer");
+
   mainContainer.textContent = "";
-  mainContainer.appendChild(createDiv("Title", "Title 1"));
+  mainContainer.appendChild(createDiv("Title", "Reminders"));
+  mainContainer.appendChild(reminderContainer);
   mainContainer
     .appendChild(createButton("addReminder", "Add Reminder"))
     .addEventListener("click", () => {

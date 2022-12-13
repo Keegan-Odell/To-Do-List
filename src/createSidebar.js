@@ -8,12 +8,12 @@ function createSidebar1() {
   sidebarContainer.classList.add("sideBarContainer");
 
   sidebarContainer
-    .appendChild(createButton("Today", "Today"))
+    .appendChild(createButton("Today", "Reminders"))
     .addEventListener("click", () => {
       todayButtonFunctionality();
     });
   sidebarContainer
-    .appendChild(createButton("Scheduled", "Scheduled"))
+    .appendChild(createButton("Scheduled", "Today"))
     .addEventListener("click", () => {
       scheduledButtonFunctionality();
     });

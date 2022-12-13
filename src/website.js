@@ -1,8 +1,7 @@
 import "./styles/main.scss";
 import createDiv from "./createDiv";
 import completedSidebar from "./completedSideBar";
-
-export const todos = [];
+import todayButtonFunctionality from "./todayButtonFunc";
 
 function createHeader() {
   const header = document.createElement("header");
@@ -47,6 +46,8 @@ function initializeWebsite() {
   content.appendChild(createHeader());
   content.appendChild(createMain());
   content.appendChild(createFooter());
+
+  todayButtonFunctionality();
 }
 
 export default initializeWebsite;
