@@ -16,7 +16,7 @@ function todayButtonFunctionality() {
   mainContainer.appendChild(createDiv("Title", "Reminders"));
   mainContainer.appendChild(reminderContainer);
   mainContainer
-    .appendChild(createButton("addReminder", "Add Reminder"))
+    .appendChild(createButton("addReminder", "+ Add New Reminder"))
     .addEventListener("click", () => {
       addReminder();
     });

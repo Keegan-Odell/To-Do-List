@@ -100,6 +100,139 @@ footer {
 
 .Title {
   color: white;
-  font-size: 30px;
+  font-size: 45px;
   text-align: center;
+}
+
+table {
+  width: 80vw;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+td {
+  font-size: 30px;
+  color: white;
+}
+
+.dataRow {
+  text-align: left;
+}
+
+.completionButton {
+  width: 1.2vw;
+  height: 1.2vw;
+  border-radius: 20px;
+}
+
+.dateBtn {
+  min-width: 1.5vw;
+  min-height: 1.2vw;
+}
+
+.reminderContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.dateRow {
+  text-align: right;
+}
+
+td,
+th {
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr {
+  background-color: rgb(52, 52, 52);
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(148, 148, 148);
+  color: white;
+}
+
+.addReminder {
+  width: 80vw;
+  height: 5vh;
+  background-color: rgb(52, 52, 52);
+  color: white;
+  font-size: 20px;
+  border: 1px solid white;
+  transition: 0.3s;
+}
+
+.addReminder:hover {
+  background-color: rgb(148, 148, 148);
+}
+
+.dateBtn {
+  min-width: 100px;
+  height: 3vh;
+  background-color: rgb(52, 52, 52);
+  color: rgb(255, 255, 255);
+  border-style: none;
+  border-bottom-style: solid;
+  font-size: 20px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.dateBtn:hover {
+  opacity: 1;
+}
+
+#reminderForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#reminderName {
+  width: 79vw;
+  height: 5vh;
+  background-color: rgb(52, 52, 52);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  margin: 5px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+#createButton,
+#cancelButton {
+  width: 20vw;
+  height: 5vh;
+  font-size: 20px;
+  color: white;
+}
+
+#createButton {
+  background-color: rgb(23, 127, 23);
+  transition: 0.3s;
+}
+
+#createButton:hover {
+  background-color: darkgreen;
+}
+
+#cancelButton {
+  background-color: rgb(207, 0, 0);
+  transition: 0.3s;
+}
+
+#cancelButton:hover {
+  background-color: darkred;
 }

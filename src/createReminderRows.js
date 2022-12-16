@@ -6,8 +6,10 @@ function createReminderRows(data) {
     let row = `
       <tr>
         <td><button id=${i} class="completionButton" onclick="deleteReminderRow(this)"></button></td>
-        <td>${data[i].reminder}</td>
-        <td><button id=${i + 100} onclick="createDate(this)">${
+        <td class="dataRow">${data[i].reminder}</td>
+        <td class="dateRow"><button id=${
+          i + 100
+        } class="dateBtn" onclick="createDate(this)">${
       data[i].duedate
     }</button></td>
       </tr>
