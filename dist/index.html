@@ -17,5 +17,25 @@
       ></a>
     </div>
     <script src="./bundle.js"></script>
+    <script>
+      function deleteReminderRow(btn) {
+        let newData = JSON.parse(localStorage.getItem("reminderArray"));
+        newData.splice(btn.id, 1);
+        localStorage.setItem("reminderArray", JSON.stringify(newData));
+        location.reload();
+      }
+
+      function createDate(btn) {
+        let newData = JSON.parse(localStorage.getItem("reminderArray"));
+        let duedate = prompt(
+          "what is the due date of your reminder?",
+          "dd/mm/yyyy"
+        );
+        let duedatebutton = document.getElementById(btn.id);
+        duedatebutton.textContent = duedate;
+        newData[btn.id - 100].duedate = new Date(duedate);
+        localStorage.setItem("reminderArray", JSON.stringify(newData));
+      }
+    </script>
   </body>
 </html>

@@ -1,25 +1,12 @@
-import { reminderArray } from "./globalData";
 import { reminderFactory } from "./reminderFactory";
-
-function createReminderRows(data) {
-  const reminderTable = document.getElementById("reminderTable");
-  reminderTable.innerHTML = "";
-
-  for (let i = 0; i < data.length; i++) {
-    let row = `
-      <tr>
-        <td>${data[i].reminder}</td>
-      </tr>
-    `;
-    reminderTable.innerHTML += row;
-  }
-}
+import createReminderRows from "./createReminderRows";
+import save from "./globalData";
 
 function createReminder() {
   const reminderText = document.getElementById("reminderName").value;
   const reminderEl = reminderFactory(reminderText, "");
-  reminderArray.push(reminderEl);
-  createReminderRows(reminderArray);
+  save(reminderEl);
+  createReminderRows(JSON.parse(localStorage.getItem("reminderArray")));
 }
 
 export default createReminder;

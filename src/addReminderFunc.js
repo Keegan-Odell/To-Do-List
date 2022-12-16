@@ -1,12 +1,14 @@
 import createTable from "./createTable";
 import createForm from "./createForm";
+import createReminderRows from "./createReminderRows";
 
 function addReminder() {
   const reminderContainer = document.getElementById("reminderContainer");
 
   reminderContainer.textContent = "";
   reminderContainer.appendChild(createTable("reminderTable", "reminderTable"));
-  reminderContainer.appendChild(createForm("reminderForm", "reminderForm"));
+  createReminderRows(JSON.parse(localStorage.getItem("reminderArray")));
+  reminderContainer.appendChild(createForm("reminderForm"));
 
   return reminderContainer;
 }
