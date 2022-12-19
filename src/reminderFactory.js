@@ -1,7 +1,9 @@
+import { format } from "date-fns";
+
 export function reminderFactory(reminder, duedate) {
   const object = {
-    reminder,
-    duedate,
+    reminder: reminder,
+    duedate: duedate,
   };
   return object;
 }
